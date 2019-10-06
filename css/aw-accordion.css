@@ -1,0 +1,56 @@
+/* Entire Accordion Tab */
+.accordion-tab {
+    position: relative;
+    margin: 2px;
+    max-width: 600px;
+}
+
+/* Accordion Label */
+.accordion-tab input {
+    display: none;
+}
+
+.accordion-tab label {
+    display: block;
+    background: #00b4c6;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px 0 10px 20px;
+    cursor: pointer;
+}
+
+.accordion-tab label::after {
+    content: "\25b6";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    transition: all 0.4s;
+}
+
+.accordion-tab input[type=checkbox]:checked + label::after,
+.accordion-tab input[type=radio]:checked + label::after {
+    transform: rotate(90deg);
+}
+
+/* Accordion Contents */
+.accordion-tab-content {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #00b4c6;
+    text-align: justify;
+/* CSS animation will not work with auto height */
+/* This is why we use max-height */
+    transition: max-height 0.4s; 
+    max-height: 0;
+}
+
+.accordion-tab-content p {
+    margin: 20px;
+}
+
+.accordion-tab input:checked ~ .accordion-tab-content {
+/* Set the max-height to a large number */
+/* Or 100% viewport height */
+    max-height: 100vh;
+}

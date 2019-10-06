@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.pricing-tables-flex {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 120px;
+    color: #222222;
+    background: #eeeeee;
+}
+
+.pricing-tables-heading {
+    padding-bottom: 30px;
+}
+
+.pricing-tables-heading h1, p {
+    color: #222222;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.pricing-tables-container-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+}
+
+.pricing-tables-item {
+    flex: 1;
+}
+
+.pricing-tables-item:not(:last-child) {
+    margin-right: 35px;
+}
+
+.package {
+    border: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transition: 0.25s;
+    border-radius: 20px;
+}
+
+.package:hover {
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.025);
+}
+
+.package .header-starter,
+.package .header-professional,
+.package .header-business {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.package .header-starter,
+.package .purchase-starter {
+    background-color: #0089e8;
+}
+
+.package .header-professional,
+.package .purchase-professional {
+    background-color: #1d8f78;
+}
+
+.package .header-business,
+.package .purchase-business {
+    background-color: #f55858;
+}
+
+.package .starter,
+.package .professional,
+.package .business {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.package .starter {
+    color: #0089e8;
+}
+
+.package .professional {
+    color: #1d8f78;
+}
+
+.package .business {
+    color: #f55858;
+}
+
+.package li {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    padding: 1.2em;
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    font-size: 1.05em;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: none;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 700px) {
+button {
+    padding: .75em;
+}
+}
+
+@media only screen and (max-width: 600px) {
+.pricing-tables-container-flex {
+    flex-wrap: wrap;
+}
+
+.pricing-tables-item {
+    flex: 0 0 100%;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.package:hover {
+    box-shadow: none;
+    transform: none;
+}
+
+button {
+    padding: .75em 1.5em;
+}
+}
